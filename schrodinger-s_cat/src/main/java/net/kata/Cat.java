@@ -1,5 +1,5 @@
 package net.kata;
 
-public class App {
+public class Cat {
 
 }
