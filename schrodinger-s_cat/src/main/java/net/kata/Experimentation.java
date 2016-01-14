@@ -2,10 +2,11 @@ package net.kata;
 
 import java.util.function.BiFunction;
 
-@FunctionalInterface
-public interface Experimentation extends BiFunction<Cat,RadioactiveIsotope , SchrodingertCatBox> {
+public interface Experimentation {
 	
-	static Experimentation start(Cat cat, RadioactiveIsotope atom) {
-		return (c, a) -> new SchrodingertCatBox(c, a);
+	static  SchrodingertCatBox start(Cat cat, RadioactiveIsotope atom) {
+		BiFunction<Cat, RadioactiveIsotope, SchrodingertCatBox>  start = ((c,a) -> {return new SchrodingertCatBox(c, a);});
+		return start.apply(cat,atom);
 	}
+	
 }
