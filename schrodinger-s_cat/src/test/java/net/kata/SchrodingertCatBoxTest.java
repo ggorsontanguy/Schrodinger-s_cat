@@ -2,26 +2,43 @@ package net.kata;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import net.kata.atom.RadioactiveIsotope;
 
 public class SchrodingertCatBoxTest {
 
 	@Test
-	public final void may_kill_the_cat_when_open_the_box() {
+	public final void should_kill_the_cat_when_open_the_box() {
 		// GIVEN
 		SchrodingertCatBox given = Experimentation.start(new Cat(), new RadioactiveIsotope());
 		assertThat(given).isNotNull();
+		assertThat(given.toString()).isEqualTo("SchrodingertCatBox [cat=Cat [cri=Miaou!], radioactiveIsotope=RadioactiveIsotope [desintegre=false]]");
+		Optional<Cat> liveCat = given.openTheBox();
+		assertNotNull(liveCat);
+		assertTrue(liveCat.isPresent());
 
 		// WHEN
-		Time.pass(given);
-
+		SchrodingertCatBox when = given;
+		int count = 0;
+		while(when.openTheBox().isPresent()) {
+			when = Time.pass(when);
+			count++;
+		}
+		
+		//THEN
+		Optional<Cat> deadCat = when.openTheBox();
+		assertFalse(deadCat.isPresent());
+		assertThat(count).isGreaterThan(0);
 	}
 
 	@Test

@@ -1,5 +1,7 @@
 package net.kata;
 
+import java.util.Optional;
+
 import net.kata.atom.RadioactiveIsotope;
 
 public final class SchrodingertCatBox {
@@ -48,4 +50,14 @@ public final class SchrodingertCatBox {
 		return new SchrodingertCatBox(cat, radioactiveIsotope.passTime());
 	}
 
+	
+	public Optional<Cat> openTheBox() {
+		return Optional.ofNullable(radioactiveIsotope.isDesintegre()?null:cat);
+	}
+
+	@Override
+	public String toString() {
+		return "SchrodingertCatBox [cat=" + cat + ", radioactiveIsotope=" + radioactiveIsotope + "]";
+	}
+	
 }
