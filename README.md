@@ -1,8 +1,10 @@
-# Schrodinger-s_cat
+# Schrödinger's cat
 Functionnal Intepretation of Schrödinger's cat paradox
 
+### More info
 [Schrödinger's cat (Wikipedia)](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat)
 
+## Focus on the interessant test
 ```java
 	@Test
 	public final void should_kill_the_cat_when_open_the_box() {
@@ -28,3 +30,5 @@ Functionnal Intepretation of Schrödinger's cat paradox
 		assertThat(count).isGreaterThan(0);
 	}
 ```
+
+### Test Coverage
