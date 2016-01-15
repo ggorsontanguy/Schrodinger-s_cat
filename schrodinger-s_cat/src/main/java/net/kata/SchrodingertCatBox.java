@@ -1,5 +1,7 @@
 package net.kata;
 
+import net.kata.atom.RadioactiveIsotope;
+
 public final class SchrodingertCatBox {
 	
 	private Cat cat;
@@ -40,6 +42,10 @@ public final class SchrodingertCatBox {
 		} else if (!radioactiveIsotope.equals(other.radioactiveIsotope))
 			return false;
 		return true;
+	}
+
+	public SchrodingertCatBox passTime() {
+		return new SchrodingertCatBox(cat, radioactiveIsotope.passTime());
 	}
 
 }

@@ -8,7 +8,7 @@ public class Cat {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((cri == null) ? 0 : cri.hashCode());
+		result = prime * result + cri.hashCode();
 		return result;
 	}
 
@@ -20,15 +20,12 @@ public class Cat {
 			return false;
 		if (!(obj instanceof Cat))
 			return false;
-		Cat other = (Cat) obj;
-		if (cri == null) {
-			if (other.cri != null)
-				return false;
-		} else if (!cri.equals(other.cri))
-			return false;
 		return true;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Cat [cri=" + cri + "]";
+	}
 	
 }

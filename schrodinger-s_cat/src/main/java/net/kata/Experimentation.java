@@ -2,6 +2,8 @@ package net.kata;
 
 import java.util.function.BiFunction;
 
+import net.kata.atom.RadioactiveIsotope;
+
 public interface Experimentation {
 	
 	static  SchrodingertCatBox start(Cat cat, RadioactiveIsotope atom) {
