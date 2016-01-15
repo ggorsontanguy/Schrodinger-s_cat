@@ -56,7 +56,7 @@ public class RadioactiveIsotopeTest {
 	}
 
 	@Test
-	public void should_box_not_be_equals_when_composants_are_not_equals() {
+	public void shouldBoxNotBeEqualsWhenComposantsAreNotEquals() {
 		// GIVEN
 		Cat cat = new Cat();
 		Cat cat2 = null;
@@ -94,7 +94,7 @@ public class RadioactiveIsotopeTest {
 	}
 
 	@Test
-	public void should_RadioactiveIsotope_not_be_equals_when_one_null_or_otherClass() {
+	public void shouldRadioactiveIsotopeNotBeEqualsWhenOneNullOrOtherClass() {
 
 		// GIVEN
 		RadioactiveIsotope radioactiveIsotope = new RadioactiveIsotope();
@@ -105,7 +105,7 @@ public class RadioactiveIsotopeTest {
 	}
 
 	@Test
-	public void should_box_be_compare_in_set_when_RadioIsotope_are_different() {
+	public void shouldBoxBeCompareInSetWhenRadioIsotopeAreDifferent() {
 		// GIVEN
 		Cat cat = new Cat();
 		RadioactiveIsotope radioactiveIsotope = new RadioactiveIsotope();
@@ -131,7 +131,7 @@ public class RadioactiveIsotopeTest {
 	}
 
 	@Test
-	public void should_two_RadioactiveIsotope_be_equals_when_same_state() {
+	public void shouldTwoRadioactiveIsotopeBeEqualsWhenSameState() {
 		// GIVEN
 		RadioactiveIsotope obj2 = new RadioactiveIsotope();
 		RadioactiveIsotope radioactiveIsotope = new RadioactiveIsotope();
