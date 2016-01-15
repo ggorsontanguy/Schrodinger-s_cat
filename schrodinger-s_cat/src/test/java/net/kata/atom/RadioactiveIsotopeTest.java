@@ -1,7 +1,5 @@
 package net.kata.atom;
 
-import static org.junit.Assert.*;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
@@ -13,7 +11,6 @@ import org.junit.Test;
 
 import net.kata.Cat;
 import net.kata.SchrodingertCatBox;
-import net.kata.atom.RadioactiveIsotope;
 
 public class RadioactiveIsotopeTest {
 
@@ -100,8 +97,8 @@ public class RadioactiveIsotopeTest {
 		RadioactiveIsotope radioactiveIsotope = new RadioactiveIsotope();
 		assertThat(radioactiveIsotope.toString()).isEqualTo("RadioactiveIsotope [desintegre=false]");
 
-		assertFalse(radioactiveIsotope.equals(null));
-		assertFalse(radioactiveIsotope.equals(new Cat()));
+		assertThat(radioactiveIsotope).isNotNull();
+		assertThat(radioactiveIsotope).isNotEqualTo(new Cat());
 	}
 
 	@Test
