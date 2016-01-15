@@ -17,7 +17,7 @@ import net.kata.atom.RadioactiveIsotope;
 public class SchrodingertCatBoxTest {
 
 	@Test
-	public final void should_kill_the_cat_when_open_the_box() {
+	public final void shouldKillTheCatWhenOpenTheBox() {
 		// GIVEN
 		SchrodingertCatBox given = Experimentation.start(new Cat(), new RadioactiveIsotope());
 		assertThat(given).isNotNull();
@@ -41,7 +41,7 @@ public class SchrodingertCatBoxTest {
 	}
 
 	@Test
-	public void should_box_be_equals_when_composants_are_equals() {
+	public void shouldBoxBeEqualsWhenComposantsAreEquals() {
 		// GIVEN
 		Cat cat = new Cat();
 		RadioactiveIsotope radioactiveIsotope = new RadioactiveIsotope();
@@ -57,7 +57,7 @@ public class SchrodingertCatBoxTest {
 	}
 
 	@Test
-	public void should_box_not_be_equals_when_one_null_or_otherClass() {
+	public void shouldBoxNotBeEqualsWhenOneNullOrOtherClass() {
 		SchrodingertCatBox schrodingertCatBox1 = new SchrodingertCatBox(null, null);
 
 		assertFalse(schrodingertCatBox1.equals(null));
@@ -68,7 +68,7 @@ public class SchrodingertCatBoxTest {
 	}
 
 	@Test
-	public void should_box_be_compare_in_set() {
+	public void shouldBoxBeCompareInSet() {
 		// GIVEN
 		Cat cat = new Cat();
 		RadioactiveIsotope radioactiveIsotope = new RadioactiveIsotope();

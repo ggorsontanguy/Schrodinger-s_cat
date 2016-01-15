@@ -15,7 +15,7 @@ import net.kata.atom.RadioactiveIsotope;
 public class CatTest {
 
 	@Test
-	public final void cat_should_not_equals_to_other_thing() {
+	public final void catShouldNotEqualsToOtherThing() {
 		// GIVEN
 		Cat given = new Cat();
 		assertEquals(given.toString(), "Cat [cri=Miaou!]");
@@ -28,7 +28,7 @@ public class CatTest {
 	}
 
 	@Test
-	public void should_cat_be_compare_in_set() {
+	public void shouldCatBeCompareInSet() {
 		// GIVEN
 		Cat cat = new Cat();
 		Cat cat2 = new Cat();
