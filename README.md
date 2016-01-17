@@ -53,3 +53,5 @@ Functionnal Intepretation of Schrödinger's cat paradox
 Coverage generated with [Coverage for Eclipse](http://eclemma.org/)
 
 Table generated with http://www.tablesgenerator.com/markdown_tables
+
+[![Coverage Status](https://coveralls.io/repos/ggorsontanguy/Schrodinger-s_cat/badge.svg?branch=master&service=github)](https://coveralls.io/github/ggorsontanguy/Schrodinger-s_cat?branch=master)
